@@ -1,0 +1,30 @@
+{
+  "name": "workflow",
+  "version": "1.0.0",
+  "description": "Simple to-do visualizer in JavaScript",
+  "main": "src/main.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "cp_html": "mkdir -p dist/src && cp src/*.html dist/src/",
+    "start": "npm run build && npm run cp_html && electron dist/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kreusch-Leo/workflow.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kreusch-Leo/workflow/issues"
+  },
+  "homepage": "https://github.com/Kreusch-Leo/workflow#readme",
+  "devDependencies": {
+    "@types/electron": "^1.6.12",
+    "@types/node": "^24.3.0",
+    "electron": "^37.3.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  }
+}
