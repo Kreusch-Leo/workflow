@@ -4,10 +4,9 @@
   "description": "Simple to-do visualizer in JavaScript",
   "main": "src/main.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "cp_html": "mkdir -p dist/src && cp src/*.html dist/src/",
-    "start": "npm run build && npm run cp_html && electron dist/main.js"
+    "copy": "mkdir -p dist/pages && cp -r src/pages/* dist/pages",
+    "start": "npm run build && npm run copy && electron dist/main.js"
   },
   "repository": {
     "type": "git",
