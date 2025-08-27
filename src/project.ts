@@ -100,20 +100,26 @@ class Project {
     name: string
     path: string
     deadline: Date
+    creation_date: Date
     main_task: Task
     description: string
+    members: string[]
 
-    constructor( name       : string,
-                 path       : string,
-                 deadline   : Date,
-                 main_task  : Task,
-                 description: string ) {
+    constructor( name         : string,
+                 path         : string,
+                 deadline     : Date,
+                 creation_date: Date,
+                 main_task    : Task,
+                 description  : string,
+                 members      :string[] ) {
 
-        this.name        = name
-        this.path        = path
-        this.deadline    = deadline
-        this.main_task   = main_task
-        this.description = description
+        this.name          = name
+        this.path          = path
+        this.deadline      = deadline
+        this.creation_date = creation_date
+        this.main_task     = main_task
+        this.description   = description
+        this.members       = members
 
     }
 
@@ -155,8 +161,10 @@ class Project {
             obj.name,
             obj.path,
             new Date(obj.deadline),
+            new Date(obj.creation_date),
             Task.fromJSON(obj.main_task),
-            obj.description
+            obj.description,
+            obj.members
         )
     }
 }
